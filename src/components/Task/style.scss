@@ -1,0 +1,91 @@
+.to-do-list {
+
+    margin-top: 40px;
+    padding: 32px;
+    border: 1px solid #D7DDE9;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    h4 {
+        font-size: 1rem;
+        color: #000;
+        opacity: 54%;
+        font-weight: 400;
+    }
+
+
+    .tasks {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 2px dotted #D7DDE9;
+            cursor: pointer;
+
+            .title-task {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .concluded {
+                width: 24px;
+                height: 24px;
+                border-radius: 5px;
+                border: 1px solid #D7DDE9;
+
+            }
+
+            &:hover {
+                background-color: #F7F9FD;
+            }
+            .text-task{
+                font-size: 1.25rem;
+            }
+        }
+
+        .done {
+
+            .concluded {
+                border: 1px solid #0796D3;
+                background-color: #A0DCF6;
+                background-image: url('/images/done.png');
+                background-size: cover; 
+                background-position: center;
+            }
+
+            .text-task {
+                text-decoration: line-through;
+                color: #757575;
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 320px) {
+   .to-do-list{
+    margin-top: 0px;
+
+
+
+    .text-task{
+        font-size: 1rem;
+    }
+   }
+  }

@@ -1,0 +1,38 @@
+.btn-add {
+    padding: 16px 24px;
+
+    background: linear-gradient(90deg, rgba(7, 150, 211, 1) 0%, rgba(83, 192, 240, 1) 100%);
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.btn-cancel {
+    padding: 16px 24px;
+
+    background-color: #E7EEFB;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+}
+
+.btn-delete {
+    padding: 16px 24px;
+    background: rgb(211, 7, 7);
+    background: linear-gradient(90deg, rgba(211, 7, 7, 1) 0%, rgba(240, 83, 83, 1) 100%);
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+}
