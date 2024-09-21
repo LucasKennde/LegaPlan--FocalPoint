@@ -6,14 +6,17 @@ import { Task } from "@/components/Task";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [tasks, setTasks] = useState(() => {
-    const storedTasks = localStorage.getItem("tasks");
-    return storedTasks ? JSON.parse(storedTasks) : [];
-  });
+  const [tasks, setTasks] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false); 
   const [isRemoveMode, setIsRemoveMode] = useState(false); 
   const [currentTaskId, setCurrentTaskId] = useState(null); 
 
+  useEffect(() => {
+    const storedTasks = localStorage.getItem("tasks");
+    if (storedTasks) {
+      setTasks(JSON.parse(storedTasks));
+    }
+  }, []);
   const handleAddTask = (task) => {
     setTasks((prev) => [...prev, task]);
   };
